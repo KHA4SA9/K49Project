@@ -66,7 +66,7 @@
     <Compile Include="Assets\K49_Scripts\MainRoom.cs" />
     <Compile Include="Assets\K49_Scripts\PlayerAgentController.cs" />
     <Compile Include="Assets\K49_Scripts\PlayerController.cs" />
-    <Compile Include="Assets\K49_Scripts\UI.cs" />
+    <Compile Include="Assets\K49_Scripts\PlayerUI.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/UnityProjects/K49Project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

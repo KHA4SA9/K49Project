@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UI : MonoBehaviour {
+public class PlayerUI : MonoBehaviour {
 
-    public GameObject Cube;
-    public GameObject MainBuildingGameObject, UIButtonsGameObject;
-    private Transform MainBuildingGameObjectTransform;
-    public Vector3 Main_Building_UnitSpawnPoint;
+    public GameObject UIButtonsGameObject, Main_Building;
+    public Component PAC;
 
 	// Use this for initialization
 	void Start () {
-        MainBuildingGameObject = GameObject.Find("Main_Building/Main_Building_UnitSpawnPoint");
+        Main_Building = GameObject.Find("Main_Building");
         UIButtonsGameObject = GameObject.FindGameObjectWithTag("PlayerUIButtons");
 
         UIButtonsGameObject.SetActive(false);
@@ -36,7 +34,14 @@ public class UI : MonoBehaviour {
                     }
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Player"))
                     {
-                        Debug.Log("Touched player");
+                        Debug.Log(hit.collider);
+                        PAC = hit.collider.gameObject.GetComponent<PlayerAgentController>();
+                        PAC.gameObject.GetComponent<PlayerAgentController>().enabled = true;
+                    }
+                    if (PAC != null) {
+                        if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Default")) {
+                            PAC.gameObject.GetComponent<PlayerAgentController>().enabled = false;
+                        }
                     }
                 }
             }
@@ -48,7 +53,6 @@ public class UI : MonoBehaviour {
     }
     public void SpawnCube()
     {
-        Main_Building_UnitSpawnPoint = MainBuildingGameObject.transform.position;
-        Instantiate(Cube, Main_Building_UnitSpawnPoint, Quaternion.identity );
+        Main_Building.gameObject.GetComponent<MainBuilding>().SpawnCube();
     }
 }

@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         Player.gameObject.AddComponent<PlayerAgentController>();
+        Player.gameObject.GetComponent<PlayerAgentController>().enabled = false;
 
     }
 

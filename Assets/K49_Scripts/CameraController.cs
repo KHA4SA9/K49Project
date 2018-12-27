@@ -2,7 +2,7 @@
 using System.Collections;
 public class CameraController : MonoBehaviour {
 
-    public Vector3 SpawnPosition = new Vector3(250, 5, 250),CameraRotation = new Vector3(45, 0, 0);
+    public Vector3 SpawnPosition = new Vector3(250, 15, 250),CameraRotation = new Vector3(45, 0, 0);
     public float cMoveSpeed = 50, cZoomSpeed = 50;
     public static GameObject MainCameraPivotGameObject, MainCameraGameObject;
     private CharacterController cMoveController, cZoomController;
