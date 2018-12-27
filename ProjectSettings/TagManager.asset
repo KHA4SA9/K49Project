@@ -6,6 +6,16 @@ TagManager:
   tags:
   - Head
   - TargetCube
+  - Players
+  - Pivot
+  - Scripts
+  - Terrain
+  - Spawn
+  - MainCameraPivot
+  - SceneScriptsAndCamera
+  - Building
+  - PlayerUI
+  - PlayerUIButtons
   layers:
   - Default
   - TransparentFX
@@ -16,8 +26,8 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
+  - Player
+  - Building
   - 
   - 
   - 

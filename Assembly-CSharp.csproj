@@ -61,13 +61,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\K49_Scripts\KeyReader.cs" />
+    <Compile Include="Assets\K49_Scripts\CameraController.cs" />
+    <Compile Include="Assets\K49_Scripts\MainBuilding.cs" />
+    <Compile Include="Assets\K49_Scripts\MainRoom.cs" />
+    <Compile Include="Assets\K49_Scripts\PlayerAgentController.cs" />
     <Compile Include="Assets\K49_Scripts\PlayerController.cs" />
-    <Compile Include="Assets\WorldBuilder\Scripts\Heightmapbuilder.cs" />
-    <Compile Include="Assets\WorldBuilder\Scripts\Helpers\Threading.cs" />
-    <Compile Include="Assets\WorldBuilder\Scripts\TerrainFoliage.cs" />
-    <Compile Include="Assets\WorldBuilder\Scripts\TerrainGeneration.cs" />
-    <Compile Include="Assets\WorldBuilder\Scripts\TerrainTexturing.cs" />
+    <Compile Include="Assets\K49_Scripts\UI.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/UnityProjects/K49Project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -277,9 +276,6 @@
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="CoherentNoise">
-      <HintPath>D:/UnityProjects/K49Project/Assets/WorldBuilder/Scripts/Helpers/CoherentNoise.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/nekii/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
