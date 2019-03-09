@@ -18,6 +18,7 @@ TagManager:
   - Unit
   - PlayerGUI
   - PlayerGUIButtons
+  - PlayerGUIButton
   layers:
   - Default
   - TransparentFX

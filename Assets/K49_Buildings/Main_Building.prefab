@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4692148468444550}
-  - component: {fileID: 114521599970021908}
   - component: {fileID: 65911041530986280}
+  - component: {fileID: 114521599970021908}
   m_Layer: 10
   m_Name: Main_Building
   m_TagString: Building
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea18b4c2d72ca2c4ab3cae83043eb1e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cube: {fileID: 1133633215716036, guid: e83014875b2133d4a91ee64596a4a41a, type: 2}
+  Unit: {fileID: 1086006848635596, guid: e83014875b2133d4a91ee64596a4a41a, type: 2}
   MainBuildingGameObject: {fileID: 1057598835192800}
   GUIButtonsGameObject: {fileID: 0}
   SpawnedUnitsGameObject: {fileID: 0}

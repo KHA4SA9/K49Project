@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class PlayerGUI : MonoBehaviour {
 
-    public GameObject GUIButtonsGameObject;
+    public GameObject PlayerGUIButtonsGameObject;
     public Ray RayMouse;
     public RaycastHit HitMouse;
     public Collider MPAC,UAC;
@@ -13,8 +13,9 @@ public class PlayerGUI : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        GUIButtonsGameObject = GameObject.FindGameObjectWithTag("PlayerGUIButtons");
-        GUIButtonsGameObject.SetActive(false);
+        PlayerGUIButtonsGameObject = GameObject.FindGameObjectWithTag("PlayerGUIButtons");
+        PlayerGUIButtonsGameObject.SetActive(false);
+
 
 
     }
@@ -35,17 +36,20 @@ public class PlayerGUI : MonoBehaviour {
                     //если тронули объект с тегом
                     if (HitMouse.collider.gameObject.layer == LayerMask.NameToLayer("Building"))
                     {
-                        GUIButtonsGameObject.SetActive(true);
+                        PlayerGUIButtonsGameObject.SetActive(true);
                     }
                     if (HitMouse.collider.gameObject.layer == LayerMask.NameToLayer("MainPlayer"))
                     {
-                        HitMouse.collider.gameObject.GetComponent<MainPlayerAgentController>().enabled = true;
+                        Cancel();
+                        HitMouse.collider.gameObject.GetComponent<MainPlayerController>().enabled = true;
                         MPAC = HitMouse.collider;
                     }
                     if (HitMouse.collider.gameObject.layer == LayerMask.NameToLayer("Unit"))
                     {
-                        HitMouse.collider.gameObject.GetComponent<UnitAgentController>().enabled = true;
+                        Cancel();
+                        HitMouse.collider.gameObject.GetComponent<UnitController>().enabled = true;
                         UAC = HitMouse.collider;
+                        
                     }
                     if (HitMouse.collider.gameObject.layer == LayerMask.NameToLayer("Default"))
                     {
@@ -64,15 +68,15 @@ public class PlayerGUI : MonoBehaviour {
     {
         if (Input.GetButtonDown("Cancel"))
         {
-            GUIButtonsGameObject.SetActive(false);
+            PlayerGUIButtonsGameObject.SetActive(false);
         }
         if (MPAC != null)
         {
-            MPAC.gameObject.GetComponent<MainPlayerAgentController>().enabled = false;
+            MPAC.gameObject.GetComponent<MainPlayerController>().enabled = false;
         }
         if (UAC != null)
         {
-            UAC.gameObject.GetComponent<UnitAgentController>().enabled = false;
+            UAC.gameObject.GetComponent<UnitController>().enabled = false;
         }
     }
 }

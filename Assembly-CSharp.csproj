@@ -65,9 +65,13 @@
     <Compile Include="Assets\K49_Scripts\CameraController.cs" />
     <Compile Include="Assets\K49_Scripts\MainBuilding.cs" />
     <Compile Include="Assets\K49_Scripts\MainPlayerAgentController.cs" />
+    <Compile Include="Assets\K49_Scripts\MainPlayerController.cs" />
+    <Compile Include="Assets\K49_Scripts\MainPlayerHealthController.cs" />
     <Compile Include="Assets\K49_Scripts\PlayerGUI.cs" />
     <Compile Include="Assets\K49_Scripts\UnitAgentController.cs" />
-    <Compile Include="Assets\K49_Scripts\UnitFollowMasterAgent.cs" />
+    <Compile Include="Assets\K49_Scripts\UnitController.cs" />
+    <Compile Include="Assets\K49_Scripts\UnitFirstSpawnPointAgent.cs" />
+    <Compile Include="Assets\K49_Scripts\UnitHealthController.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/UnityProjects/K49Project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

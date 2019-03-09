@@ -1,23 +1,19 @@
 ﻿using UnityEngine;
 
 public class MainBuilding : MonoBehaviour {
-    public GameObject Cube;
-    public GameObject MainBuildingGameObject, GUIButtonsGameObject, SpawnedUnitsGameObject;
-    public Vector3 Main_Building_UnitSpawnPoint;
-    // Use this for initialization
-    void Start() {
-        MainBuildingGameObject = GameObject.Find("Main_Building/Main_Building_UnitSpawnPoint");
+    public GameObject Unit;
+    public GameObject MainBuildingFirstSpawnPointSpawnGameObject, SpawnedUnitsGameObject;
+    public static Vector3 MainBuildingFirstSpawnPoint;
+
+    void Awake() {
+
+        MainBuildingFirstSpawnPointSpawnGameObject = GameObject.Find("Main_Building/MainBuildingFirstSpawnPoint");
         SpawnedUnitsGameObject = new GameObject("SpawnedUnits");
-
+        MainBuildingFirstSpawnPoint = MainBuildingFirstSpawnPointSpawnGameObject.transform.position;
     }
 
-    // Update is called once per frame
-    void Update() {
-
-    }
     public void SpawnCube()
     { 
-        Main_Building_UnitSpawnPoint = MainBuildingGameObject.transform.position;
-        Instantiate(Cube, Main_Building_UnitSpawnPoint, Quaternion.identity,SpawnedUnitsGameObject.transform);
+        Instantiate(Unit, transform.position, Quaternion.identity,SpawnedUnitsGameObject.transform);
     }
 }

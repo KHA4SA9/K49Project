@@ -39,13 +39,13 @@ public class BoxSelecter : MonoBehaviour {
 
                 // делаем что-либо с выделенными объектами
 
-                if (unitSelected[j].GetComponent<MainPlayerAgentController>())
+                if (unitSelected[j].GetComponent<MainPlayerController>())
                 {
-                    unitSelected[j].GetComponent<MainPlayerAgentController>().enabled = true;
+                    unitSelected[j].GetComponent<MainPlayerController>().enabled = true;
                 }
-                if (unitSelected[j].GetComponent<UnitAgentController>())
+                if (unitSelected[j].GetComponent<UnitController>())
                 {
-                    unitSelected[j].GetComponent<UnitAgentController>().enabled = true;
+                    unitSelected[j].GetComponent<UnitController>().enabled = true;
                 }
             }
         }
@@ -59,13 +59,13 @@ public class BoxSelecter : MonoBehaviour {
             {
                 // отменяем то, что делали с объектоми
 
-                if (unitSelected[j].GetComponent<MainPlayerAgentController>())
+                if (unitSelected[j].GetComponent<MainPlayerController>())
                 {
-                    unitSelected[j].GetComponent<MainPlayerAgentController>().enabled = false;
+                    unitSelected[j].GetComponent<MainPlayerController>().enabled = false;
                 }
-                if (unitSelected[j].GetComponent<UnitAgentController>())
+                if (unitSelected[j].GetComponent<UnitController>())
                 {
-                    unitSelected[j].GetComponent<UnitAgentController>().enabled = false;
+                    unitSelected[j].GetComponent<UnitController>().enabled = false;
                 }
             }
         }
