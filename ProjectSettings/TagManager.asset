@@ -14,8 +14,10 @@ TagManager:
   - MainCameraPivot
   - SceneScriptsAndCamera
   - Building
-  - PlayerUI
-  - PlayerUIButtons
+  - MainPlayer
+  - Unit
+  - PlayerGUI
+  - PlayerGUIButtons
   layers:
   - Default
   - TransparentFX
@@ -26,9 +28,9 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - Player
+  - MainPlayer
   - Building
-  - 
+  - Unit
   - 
   - 
   - 
